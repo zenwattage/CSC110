@@ -1,0 +1,18 @@
+#Scott Hansford
+#CSC110
+#5/9/17
+#Lab - 8
+import math
+#main function
+import prime
+def main():
+    num = int(input("Enter the begin of the range >1: "))
+    if num >0:
+        flag = prime.is_prime(num)
+        if flag:
+            print("num is Prime")
+        else:
+            print("Incorrect input")
+    else:
+        print("Error")
+main()
