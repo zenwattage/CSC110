@@ -1,0 +1,79 @@
+#Scott Hansford
+#CSC110
+#5/5/17
+#HW4 Function Version
+
+#main function - Menu/input
+def main():
+    # Initialize Menu
+    menu = -1
+    while menu != 0:
+        # get input from user with menu
+        print('\t')
+        print("1. Find the number that has maximum numbers of digits.")
+        print("2. Find the number that has the maximum number of divisors.")
+        print("3. Find and display all numbers in given range which are divided by three.")
+        print("0. Finish working with the program.")
+        menu = int(input("Select option: "))
+        if menu == 1:
+            mode1()
+        elif menu == 2:
+            mode2()
+        elif menu == 3:
+            mode3()
+        else:
+            break
+#menu 1
+def mode1():
+    import random
+    n = int(input("How many numbers would you like to calculate?: "))
+    sum_max = 0
+    result = 0
+    for count in range(n):
+        n = random.randrange(1,1000000)
+        print(n,end = " ")
+        sum = 0
+        temp = n
+        while n > 0:
+            sum += 1
+            n = n//10
+        if sum > sum_max:
+            sum_max = sum
+            result = temp
+    print("Your number has",sum_max,"digits.",result,"is your highest digit.")
+#menu 2
+def mode2():
+    import random
+    m = int(input("How many numbers do you need to calculate?: "))
+    div = 0
+    result = 0
+    for count in range(m):
+        m = random.randrange(100,200)
+        print(m, end = " ")
+        sum = 0
+        for div in range(2,m):
+            if m%div == 0:
+                sum += 1
+    print("has the maximum number of divisors that equals ",div)
+#menu 3
+def mode3():
+    userPrompt = True
+    start_range = 0
+    end_range = 0
+    while userPrompt:
+        range_num = int(input("Enter a number in range 0-3: "))
+        start_range = int(input("Enter the first number in the range: "))
+        end_range = int(input("End the last number in the range: "))
+        if start_range > end_range:
+            print("Start must be smaller than end of the range.")
+        else:
+            userPrompt = False
+    for n in range(end_range - start_range):
+        print(n//range_num, end = " ")
+    for count in range(start_range,end_range):
+        div_check = n%3
+        if div_check == 0:
+            print(count,n)
+
+#Initialize menu function
+main()
