@@ -1,0 +1,15 @@
+1995 First year
+2015 End year
+379 :Total Fatalities
+0 :Minimum Fatalities
+1118 is your total tornados
+379 is your total fatalities
+53 is your average tornadoes
+18 is your avverage fatalities
+183 is your average injuries
+23 is your Minimum Tornadoes in,
+145 is your Maximum Tornadoes in,
+271 is your minimum Fatalities in,
+0 is your max Fatalities in,
+3848 is your maximum Injuries,
+1 is your minimum Injuries in year,
